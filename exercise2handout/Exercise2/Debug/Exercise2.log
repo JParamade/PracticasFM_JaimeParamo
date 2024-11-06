@@ -1,0 +1,75 @@
+﻿  camera.cpp
+  exercise2.cpp
+  gl_utils.cpp
+  lineshapes.cpp
+  main.cpp
+  maths_funcs.cpp
+  mesh.cpp
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244:         with
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244:         [
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244:             TReal=float
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244:         ]
+  (compiling source file 'mesh.cpp')
+      G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15):
+      the template instantiation context (the oldest one first) is
+          G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(107,24):
+          see reference to class template instantiation 'aiQuaterniont<float>' being compiled
+          G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(186,1):
+          while compiling class template member function 'void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)'
+          with
+          [
+              TReal=float
+          ]
+              G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(435,28):
+              see the first reference to 'aiQuaterniont<float>::Interpolate' in 'Assimp::Interpolator<aiQuaternion>::operator ()'
+  
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244:         with
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244:         [
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244:             TReal=float
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244:         ]
+  (compiling source file 'mesh.cpp')
+  
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244:         with
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244:         [
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244:             TReal=float
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244:         ]
+  (compiling source file 'mesh.cpp')
+  
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244:         with
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244:         [
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244:             TReal=float
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244:         ]
+  (compiling source file 'mesh.cpp')
+  
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244: 'return': conversion from 'double' to 'TReal', possible loss of data
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244:         with
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244:         [
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244:             TReal=float
+G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244:         ]
+  (compiling source file 'mesh.cpp')
+      G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13):
+      the template instantiation context (the oldest one first) is
+          G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\types.h(150,22):
+          see reference to class template instantiation 'aiVector3t<float>' being compiled
+          G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(142,91):
+          while compiling class template member function 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const'
+              G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(82,3):
+              see the first reference to 'aiVector3t<float>::operator ==' in 'aiVectorKey::operator =='
+          G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(92,57):
+          while compiling class template member function 'TReal aiVector3t<TReal>::Length(void) const'
+          with
+          [
+              TReal=float
+          ]
+              G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(98,8):
+              see the first reference to 'aiVector3t<float>::Length' in 'aiVector3t<float>::Normalize'
+              G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\camera.h(191,50):
+              see the first reference to 'aiVector3t<float>::Normalize' in 'aiCamera::GetCameraMatrix'
+  
+  node.cpp
+  Generating Code...
+  Exercise2.vcxproj -> G:\U-TAD\Programa Avanzado en Programacion de Videojuegos\Fundamentos Matematicos\PracticasFM_JaimeParamo\exercise2handout\Debug\Exercise2.exe
