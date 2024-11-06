@@ -1,0 +1,48 @@
+﻿camera.obj : error LNK2019: unresolved external symbol __imp___glewGetUniformLocation referenced in function "public: void __cdecl Camera::get_shader_locations(unsigned int)" (?get_shader_locations@Camera@@QEAAXI@Z)
+lineshapes.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+camera.obj : error LNK2019: unresolved external symbol __imp___glewUniformMatrix4fv referenced in function "public: void __cdecl Camera::set_shader_data(unsigned int,struct mat4)" (?set_shader_data@Camera@@QEAAXIUmat4@@@Z)
+lineshapes.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+gl_utils.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwInit referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+main.obj : error LNK2001: unresolved external symbol glfwTerminate
+gl_utils.obj : error LNK2019: unresolved external symbol glfwGetVersionString referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwSetErrorCallback referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwSetWindowTitle referenced in function "void __cdecl _update_fps_counter(struct GLFWwindow *)" (?_update_fps_counter@@YAXPEAUGLFWwindow@@@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwSetFramebufferSizeCallback referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function "void __cdecl _update_fps_counter(struct GLFWwindow *)" (?_update_fps_counter@@YAXPEAUGLFWwindow@@@Z)
+main.obj : error LNK2001: unresolved external symbol glfwGetTime
+gl_utils.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewAttachShader referenced in function "bool __cdecl create_programme(unsigned int,unsigned int,unsigned int *)" (?create_programme@@YA_NIIPEAI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewCompileShader referenced in function "bool __cdecl create_shader(char const *,unsigned int *,unsigned int)" (?create_shader@@YA_NPEBDPEAII@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewCreateProgram referenced in function "bool __cdecl create_programme(unsigned int,unsigned int,unsigned int *)" (?create_programme@@YA_NIIPEAI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewCreateShader referenced in function "bool __cdecl create_shader(char const *,unsigned int *,unsigned int)" (?create_shader@@YA_NPEBDPEAII@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewDeleteShader referenced in function "bool __cdecl create_programme(unsigned int,unsigned int,unsigned int *)" (?create_programme@@YA_NIIPEAI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramInfoLog referenced in function "void __cdecl print_programme_info_log(unsigned int)" (?print_programme_info_log@@YAXI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramiv referenced in function "bool __cdecl create_programme(unsigned int,unsigned int,unsigned int *)" (?create_programme@@YA_NIIPEAI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderInfoLog referenced in function "void __cdecl print_shader_info_log(unsigned int)" (?print_shader_info_log@@YAXI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderiv referenced in function "bool __cdecl create_shader(char const *,unsigned int *,unsigned int)" (?create_shader@@YA_NPEBDPEAII@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewLinkProgram referenced in function "bool __cdecl create_programme(unsigned int,unsigned int,unsigned int *)" (?create_programme@@YA_NIIPEAI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewShaderSource referenced in function "bool __cdecl create_shader(char const *,unsigned int *,unsigned int)" (?create_shader@@YA_NPEBDPEAII@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewValidateProgram referenced in function "bool __cdecl is_programme_valid(unsigned int)" (?is_programme_valid@@YA_NI@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp___glewGenerateMipmap referenced in function "void __cdecl load_texture_to_gpu(unsigned char *,unsigned int *,int,int,int)" (?load_texture_to_gpu@@YAXPEAEPEAIHHH@Z)
+gl_utils.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function "bool __cdecl startGlContext(struct GLFWwindow * *,int,int)" (?startGlContext@@YA_NPEAPEAUGLFWwindow@@HH@Z)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewBindBuffer referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewBufferData referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewGenBuffers referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewEnableVertexAttribArray referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewVertexAttribPointer referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewBindVertexArray referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+lineshapes.obj : error LNK2019: unresolved external symbol __imp___glewGenVertexArrays referenced in function "public: void __cdecl Lines::load_to_gpu(void)" (?load_to_gpu@Lines@@QEAAXXZ)
+main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: bool __cdecl Exercise1::isLoopGo(void)" (?isLoopGo@Exercise1@@QEAA_NXZ)
+main.obj : error LNK2019: unresolved external symbol glfwSetWindowShouldClose referenced in function "public: void __cdecl Exercise1::update(void)" (?update@Exercise1@@QEAAXXZ)
+main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function "public: void __cdecl Exercise1::update(void)" (?update@Exercise1@@QEAAXXZ)
+main.obj : error LNK2019: unresolved external symbol glfwGetKey referenced in function "public: void __cdecl Exercise1::update(void)" (?update@Exercise1@@QEAAXXZ)
+main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function "public: void __cdecl Exercise1::update(void)" (?update@Exercise1@@QEAAXXZ)
+main.obj : error LNK2019: unresolved external symbol __imp___glewUseProgram referenced in function "public: void __cdecl Exercise1::update(void)" (?update@Exercise1@@QEAAXXZ)
+..\common\lib\assimp-vc141-mt.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+..\common\lib\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+..\common\lib\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\jose.benito\Downloads\exercise1handout\x64\Debug\Exercise1.exe : fatal error LNK1120: 40 unresolved externals
