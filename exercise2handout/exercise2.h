@@ -110,13 +110,11 @@ struct Exercise2 {
 		}
 
 		axis.load_to_gpu();
-
 	
 		vec3 gridColor(fmodf(ambientColor.v[0] + 0.5f, 1.f), fmodf(ambientColor.v[1] + 0.5f, 1.f), fmodf(ambientColor.v[2] + 0.5f, 1.f));
 		Shapes::addGrid(grid, vec3(-5, 0, -5), vec3(5, 0, 5), gridColor, 10);
 		grid.load_to_gpu();
 		grid.get_shader_uniforms(lines_shader_index);
-
 
 		// camera
 		cameraPosition = vec3(0, 3, 20);
@@ -164,7 +162,6 @@ struct Exercise2 {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glViewport(0, 0, g_gl_width, g_gl_height);
 
-
 		glfwPollEvents();
 		if (isInputEnabled) {
 			glfwGetCursorPos(window, &mousePosX, &mousePosY);
@@ -176,8 +173,6 @@ struct Exercise2 {
 			camYaw += -mouseDeltaX * camera.yaw_speed * elapsed_seconds;
 			camPitch += -mouseDeltaY * camera.yaw_speed * elapsed_seconds;
 		}
-		
-
 
 		if (glfwGetKey(window, GLFW_KEY_A)) {
 			camYaw += camera.yaw_speed * elapsed_seconds;
@@ -202,6 +197,9 @@ struct Exercise2 {
 		// TODO: use keys to modify cameraPosition here
 
 		camNode.position = cameraPosition;
+
+		if (glfwGetKey(window, GLFW_KEY_UP)) cameraPosition.z -= 3 * elapsed_seconds;
+		if (glfwGetKey(window, GLFW_KEY_DOWN)) cameraPosition.z += 3 * elapsed_seconds;
 
 		mat4 cameraMatrix = translate( identity_mat4(), cameraPosition*-1.f);
 		mat4 gridMatrix = translate(identity_mat4(), vec3(0,0,0));
