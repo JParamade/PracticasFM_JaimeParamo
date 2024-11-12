@@ -3,7 +3,6 @@
 #include "maths_funcs.h"
 
 struct Node {
-
 	Node* parent;
 	std::vector<Node*> children;
 
