@@ -1,0 +1,57 @@
+﻿  camera.cpp
+  exercise2.cpp
+  lineshapes.cpp
+  main.cpp
+  mesh.cpp
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(186,1): message : while compiling class template member function 'void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)'
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(435,28): message : see reference to function template instantiation 'void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)' being compiled
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(107,24): message : see reference to class template instantiation 'aiQuaterniont<float>' being compiled
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(208,14): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(209,61): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(210,33): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(93,13): warning C4244: 'return': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(92,57): message : while compiling class template member function 'TReal aiVector3t<TReal>::Length(void) const'
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(98,8): message : see reference to function template instantiation 'TReal aiVector3t<TReal>::Length(void) const' being compiled
+          with
+          [
+              TReal=float
+          ]
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(142,91): message : while compiling class template member function 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const'
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(82,3): message : see reference to function template instantiation 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const' being compiled
+C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\types.h(150,22): message : see reference to class template instantiation 'aiVector3t<float>' being compiled
+  node.cpp
+  Generating Code...
+  Exercise2.vcxproj -> C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\exercise2handout\Debug\Exercise2.exe

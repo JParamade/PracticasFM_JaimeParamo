@@ -194,12 +194,12 @@ struct Exercise2 {
 		// TODO: 
 		// camNode.rotation = quat_from_axis_deg(...)* ...;
 		
-		// TODO: use keys to modify cameraPosition here
-
-		camNode.position = cameraPosition;
+		/*--------------------------------CAMERA TRASLATION--------------------------------*/
 
 		if (glfwGetKey(window, GLFW_KEY_UP)) cameraPosition.z -= 3 * elapsed_seconds;
 		if (glfwGetKey(window, GLFW_KEY_DOWN)) cameraPosition.z += 3 * elapsed_seconds;
+		
+		camNode.position = cameraPosition;
 
 		mat4 cameraMatrix = translate( identity_mat4(), cameraPosition*-1.f);
 		mat4 gridMatrix = translate(identity_mat4(), vec3(0,0,0));
@@ -237,7 +237,6 @@ struct Exercise2 {
 		axis.set_shader_uniforms(lines_shader_index, sceneRoot.worldMatrix);
 
 		axis.render(lines_shader_index);
-
 
 		glUseProgram(0);
 
