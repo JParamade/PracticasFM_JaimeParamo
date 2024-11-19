@@ -40,7 +40,7 @@ void  Node::updateLocal()
 	mat4 Tinv = translate(identity_mat4(), position * -1);
 	mat4 Rinv = transpose(R); 
 	mat4 Sinv = scaler(identity_mat4(), scale); 
-
+	
 	localInverseMatrix = Sinv*Rinv*Tinv;
 }
 

@@ -191,8 +191,10 @@ struct Exercise2 {
 		camPitch = camPitch < -PitchLimit ? -PitchLimit : camPitch;
 		camYaw = fmodf(camYaw, 360);
 
-		// TODO: 
-		// camNode.rotation = quat_from_axis_deg(...)* ...;
+		/*--------------------------------CAMERA ROTATION--------------------------------*/
+
+		float cameraSens = 1;
+		camNode.rotation = quat_from_axis_deg(1, camPitch, camYaw, 0) * cameraSens;
 		
 		/*--------------------------------CAMERA TRASLATION--------------------------------*/
 
@@ -201,19 +203,18 @@ struct Exercise2 {
 		
 		camNode.position = cameraPosition;
 
-		mat4 cameraMatrix = translate( identity_mat4(), cameraPosition*-1.f);
+		mat4 cameraMatrix = translate(identity_mat4(), cameraPosition*-1.f);
 		mat4 gridMatrix = translate(identity_mat4(), vec3(0,0,0));
 
 		meshGroupNode.rotation = quat_from_axis_deg(meshYaw += elapsed_seconds * 10, 0, 1, 0);
 
-		// whole scene hierarchy is updated here from root downwards
 		sceneRoot.updateHierarchy();
 
 		glUseProgram(mesh_shader_index);
 
 		camera.get_shader_uniforms(mesh_shader_index);
 		camera.set_shader_uniforms(mesh_shader_index, cameraMatrix );
-		// TODO: camera.set_shader_uniforms(lines_shader_index, ...);
+		camera.set_shader_uniforms(lines_shader_index, camNode.localInverseMatrix);
 		
 
 		meshGroup.set_shader_uniforms(mesh_shader_index,  ambientColor);
@@ -225,10 +226,10 @@ struct Exercise2 {
 
 		camera.get_shader_uniforms(lines_shader_index);
 		camera.set_shader_uniforms(mesh_shader_index, cameraMatrix );
-		// TODO: camera.set_shader_uniforms(lines_shader_index, ...);
+		camera.set_shader_uniforms(lines_shader_index, camNode.localInverseMatrix);
 
 		grid.get_shader_uniforms(lines_shader_index);
-		//TODO: grid.set_shader_uniforms(lines_shader_index, ...);
+		grid.set_shader_uniforms(lines_shader_index, sceneRoot.localMatrix);
 
 		grid.set_shader_uniforms(lines_shader_index, gridMatrix);
 		grid.render(lines_shader_index);
@@ -240,7 +241,6 @@ struct Exercise2 {
 
 		glUseProgram(0);
 
-		// put the stuff we've been drawing onto the display
 		glfwSwapBuffers(window);
 	}
 
@@ -249,7 +249,6 @@ struct Exercise2 {
 	}
 
 	void terminate() {
-		// close GL context and any other GLFW resources
 		glfwTerminate();
 	}
 };
