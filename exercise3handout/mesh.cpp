@@ -105,7 +105,6 @@ void getNodeHierarchy(std::vector<Node>& nodes, size_t nodeIndex, size_t& curren
 	}
 }
 
-
 aiNode* getMeshNode(const aiScene* scene, aiNode* node, const aiMesh* mesh) {
 	aiNode* ret = nullptr;
 	if (node->mNumMeshes) {

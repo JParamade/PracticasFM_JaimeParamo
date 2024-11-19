@@ -43,12 +43,9 @@ struct Exercise3 {
 	//  see shaders for hints
 	// get world mouse position
 	// ray sphere intersection for selection 
-
 	
 	static vec3 getWorldMousePosition(float mouse_x, float mouse_y, float windowsWidth, float windowsHeight, const mat4& projMat, const mat4& viewMat) {
-
 		return vec3(0, 0, 0);
-
 	}
 
 	/* check if a ray and a sphere intersect. if not hit, returns false. it rejects
@@ -162,7 +159,6 @@ struct Exercise3 {
 		}
 	}
 
-
 	vec3  ambientColor = vec3(0.7f, 0.7f, 0.75f);
 
 	Meshgroup meshGroup;
@@ -195,9 +191,7 @@ struct Exercise3 {
 	// exercise:
 	// ray picking
 
-
 	void init(int width, int height) {
-
 		windowsWidth = width;
 		windowsHeight = height;
 
@@ -222,7 +216,6 @@ struct Exercise3 {
 			meshGroupNode.addChild(sphereNodes[i]);
 		}
 
-
 		//float scaleValue = 0.001f;
 		//meshGroupNode.scale = vec3(scaleValue, scaleValue, scaleValue);
 		//meshGroupNode.position = vec3(0, 20, 0);
@@ -245,14 +238,11 @@ struct Exercise3 {
 		assert(meshGroup.meshes.size() > 0);
 
 		meshGroupNode.addChild(meshGroup.nodes[0]);
-
-
 	
 		vec3 gridColor(fmodf(ambientColor.v[0] + 0.5f, 1.f), fmodf(ambientColor.v[1] + 0.5f, 1.f), fmodf(ambientColor.v[2] + 0.5f, 1.f));
 		Shapes::addGrid(grid, vec3(-5, 0, -5), vec3(5, 0, 5), gridColor, 10);
 		grid.load_to_gpu();
 		grid.get_shader_uniforms(lines_shader_index);
-
 
 		// camera
 		cameraPosition = vec3(0, 1, 6);
@@ -272,7 +262,6 @@ struct Exercise3 {
 
 		sceneRoot.updateHierarchy();
 
-
 		// tell GL to only draw onto a pixel if the shape is closer to the viewer
 		glEnable(GL_DEPTH_TEST); // enable depth-testing
 		glDepthFunc(GL_LESS);		 // depth-testing interprets a smaller value as "closer"
@@ -286,7 +275,6 @@ struct Exercise3 {
 		glfwSetWindowFocusCallback(window, onWindowsFocus);
 		glfwSetMouseButtonCallback(window, onMouseClicked);
 		glfwSetKeyCallback(window, onKeyPressed);
-
 	}
 
 	void update() {
@@ -300,7 +288,6 @@ struct Exercise3 {
 		glClearColor(ambientColor.v[0], ambientColor.v[1], ambientColor.v[2], 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glViewport(0, 0, g_gl_width, g_gl_height);
-
 
 		glfwPollEvents();
 		if (isInputEnabled) {

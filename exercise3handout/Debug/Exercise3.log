@@ -1,9 +1,5 @@
-﻿  camera.cpp
-  exercise3.cpp
-  gl_utils.cpp
-  lineshapes.cpp
+﻿  exercise3.cpp
   main.cpp
-  maths_funcs.cpp
   mesh.cpp
 C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\quaternion.inl(207,15): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
           with
@@ -54,6 +50,5 @@ C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimePa
 C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\vector3.inl(142,91): message : while compiling class template member function 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const'
 C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\anim.h(82,3): message : see reference to function template instantiation 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const' being compiled
 C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\common\include\assimp\types.h(150,22): message : see reference to class template instantiation 'aiVector3t<float>' being compiled
-  node.cpp
   Generating Code...
   Exercise3.vcxproj -> C:\Users\jaime.paramo\Documents\PAVJ\Fundamentos Matematicos\PracticasFM_JaimeParamo\exercise3handout\Debug\Exercise3.exe
