@@ -213,9 +213,8 @@ struct Exercise2 {
 		glUseProgram(mesh_shader_index);
 
 		camera.get_shader_uniforms(mesh_shader_index);
-		camera.set_shader_uniforms(mesh_shader_index, cameraMatrix );
+		camera.set_shader_uniforms(mesh_shader_index, camNode.worldMatrix);
 		camera.set_shader_uniforms(lines_shader_index, camNode.localInverseMatrix);
-		
 
 		meshGroup.set_shader_uniforms(mesh_shader_index,  ambientColor);
 		meshGroup.render(mesh_shader_index);
@@ -225,13 +224,13 @@ struct Exercise2 {
 		glUseProgram(lines_shader_index);
 
 		camera.get_shader_uniforms(lines_shader_index);
-		camera.set_shader_uniforms(mesh_shader_index, cameraMatrix );
+		camera.set_shader_uniforms(mesh_shader_index, camNode.worldMatrix);
 		camera.set_shader_uniforms(lines_shader_index, camNode.localInverseMatrix);
 
 		grid.get_shader_uniforms(lines_shader_index);
-		grid.set_shader_uniforms(lines_shader_index, sceneRoot.localMatrix);
+		grid.set_shader_uniforms(lines_shader_index, sceneRoot.worldMatrix);
 
-		grid.set_shader_uniforms(lines_shader_index, gridMatrix);
+		grid.set_shader_uniforms(lines_shader_index, sceneRoot.worldMatrix);
 		grid.render(lines_shader_index);
 
 		axis.get_shader_uniforms(lines_shader_index);
