@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\exercise3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|solutionrelative:exercise3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|solutionrelative:node.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|solutionrelative:node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\exercise3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{80A14D9E-4FB9-455B-B626-FECB6B3654BD}|Exercise3.vcxproj|solutionrelative:exercise3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "node.cpp",
               "DocumentMoniker": "G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\node.cpp",
               "RelativeDocumentMoniker": "node.cpp",
@@ -34,12 +34,11 @@
               "RelativeToolTip": "node.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T05:51:54.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T05:51:54.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "node.h",
               "DocumentMoniker": "G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\node.h",
               "RelativeDocumentMoniker": "node.h",
@@ -47,18 +46,17 @@
               "RelativeToolTip": "node.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-14T05:51:52.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T05:51:52.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "exercise3.h",
               "DocumentMoniker": "G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\exercise3.h",
               "RelativeDocumentMoniker": "exercise3.h",
               "ToolTip": "G:\\U-TAD\\Programa Avanzado en Programacion de Videojuegos\\Fundamentos Matematicos\\PracticasFM_JaimeParamo\\exercise3handout\\exercise3.h",
               "RelativeToolTip": "exercise3.h",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-14T05:51:48.611Z",
               "EditorCaption": ""

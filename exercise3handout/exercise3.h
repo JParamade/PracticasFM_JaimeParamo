@@ -44,13 +44,16 @@ struct Exercise3 {
 	// ray sphere intersection for selection 
 	
 	static vec3 getWorldMousePosition(float mouse_x, float mouse_y, float windowsWidth, float windowsHeight, const mat4& projMat, const mat4& viewMat) {
-		float x	= ((mouse_x / windowsWidth) * 2) - 1;
-		float y = ((mouse_y / windowsHeight) * 2) - 1;
-		float z = -1;
+		float cubeCoordinatesX = ((mouse_x / windowsWidth) * 2) - 1;
+		float cubeCoordinatesY = ((mouse_y / windowsHeight) * 2) - 1;
+		float cubeCoordinatesZ = -1;
 
-		vec4 ss = inverse(projMat) * vec4(x, y, z, 1);
+		vec4 homogeneousCube = vec4(cubeCoordinatesX, cubeCoordinatesY, cubeCoordinatesZ, 1);
 
-		return vec3(x, y, -1);
+		vec4 cameraSpace = inverse(projMat) * homogeneousCube;
+		vec4 worldSpace = inverse(viewMat) * cameraSpace;
+
+		return homogeneous(worldSpace);
 	}
 
 	/* check if a ray and a sphere intersect. if not hit, returns false. it rejects
@@ -382,7 +385,6 @@ struct Exercise3 {
 		axis.set_shader_uniforms(lines_shader_index, sceneRoot.worldMatrix);
 
 		axis.render(lines_shader_index);
-
 
 		glUseProgram(0);
 
