@@ -50,10 +50,13 @@ struct Exercise3 {
 
 		vec4 homogeneousCube = vec4(cubeCoordinatesX, cubeCoordinatesY, cubeCoordinatesZ, 1);
 
-		vec4 cameraSpace = inverse(projMat) * homogeneousCube;
-		vec4 worldSpace = inverse(viewMat) * cameraSpace;
+		vec4 cameraSpace = homogeneous(inverse(projMat) * homogeneousCube);
+		vec4 worldSpace = homogeneous(inverse(viewMat) * cameraSpace);
+		
+		// Lines line;
+		// Shapes::addArrow(line, homogeneousCube, homogeneousCube + camera, vec3(1, 0, 0));
 
-		return homogeneous(worldSpace);
+		return worldSpace;
 	}
 
 	/* check if a ray and a sphere intersect. if not hit, returns false. it rejects
