@@ -45,16 +45,13 @@ struct Exercise3 {
 	
 	static vec3 getWorldMousePosition(float mouse_x, float mouse_y, float windowsWidth, float windowsHeight, const mat4& projMat, const mat4& viewMat) {
 		float cubeCoordinatesX = ((mouse_x / windowsWidth) * 2) - 1;
-		float cubeCoordinatesY = ((mouse_y / windowsHeight) * 2) - 1;
+		float cubeCoordinatesY = (((windowsHeight - mouse_y) / windowsHeight) * 2) - 1;
 		float cubeCoordinatesZ = -1;
 
 		vec4 homogeneousCube = vec4(cubeCoordinatesX, cubeCoordinatesY, cubeCoordinatesZ, 1);
 
 		vec4 cameraSpace = homogeneous(inverse(projMat) * homogeneousCube);
 		vec4 worldSpace = homogeneous(inverse(viewMat) * cameraSpace);
-		
-		// Lines line;
-		// Shapes::addArrow(line, homogeneousCube, homogeneousCube + camera, vec3(1, 0, 0));
 
 		return worldSpace;
 	}
@@ -67,6 +64,14 @@ struct Exercise3 {
 		vec3 origin;
 		vec3 direction;
 	};
+
+	static void DebugArrow(Exercise3 &_eExercise, Ray _rRay, int _fDistance, vec3 _vColor) {
+		_eExercise.axis.clear();
+
+		Shapes::addArrow(_eExercise.axis, _rRay.origin, _rRay.origin + normalise(_rRay.direction) * _fDistance, _vColor);
+
+		_eExercise.axis.load_to_gpu();
+	}
 
 	// as in http://viclw17.github.io/2018/07/16/raytracing-ray-sphere-intersection/
 	// also "Ray Sphere Intersection 1 Analytical.pdf"
@@ -150,6 +155,8 @@ struct Exercise3 {
 			ray.origin = camPos;
 			ray.direction = normalise(mouseWorldPos - camPos);
 
+			DebugArrow(exercise, ray, 10000, vec3(0.96f, 0.26f, 0.88f)); // Debug arrow to visualize collision.
+			
 			// check ray against all spheres in scene
 			int closest_sphere_clicked = -1;
 			float closest_intersection = 0.0f;
