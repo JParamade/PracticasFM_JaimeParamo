@@ -48,12 +48,12 @@ struct Exercise3 {
 		float cubeCoordinatesY = (((windowsHeight - mouse_y) / windowsHeight) * 2) - 1;
 		float cubeCoordinatesZ = -1;
 
-		vec4 homogeneousCube = vec4(cubeCoordinatesX, cubeCoordinatesY, cubeCoordinatesZ, 1);
+		vec4 homogeneousCubeCoords = vec4(cubeCoordinatesX, cubeCoordinatesY, cubeCoordinatesZ, 1);
 
-		vec4 cameraSpace = homogeneous(inverse(projMat) * homogeneousCube);
-		vec4 worldSpace = homogeneous(inverse(viewMat) * cameraSpace);
+		vec4 cameraSpaceCoords = homogeneous(inverse(projMat) * homogeneousCubeCoords);
+		vec4 worldSpaceCoords = inverse(viewMat) * cameraSpaceCoords;
 
-		return worldSpace;
+		return worldSpaceCoords;
 	}
 
 	/* check if a ray and a sphere intersect. if not hit, returns false. it rejects
@@ -75,54 +75,77 @@ struct Exercise3 {
 
 	// as in http://viclw17.github.io/2018/07/16/raytracing-ray-sphere-intersection/
 	// also "Ray Sphere Intersection 1 Analytical.pdf"
-	static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
-
-		const vec3& A = ray.origin;
-		const vec3& B = ray.direction;
-		
-		assert(fabsf(length(B) - 1) < 1e-03);
-		
-		// work out components of quadratic
-		vec3 A_C = A - C;
-		float a = 1;
-		float b = 2*dot(B, A_C);
-		float c = dot(A_C, A_C) - r * r;
-		float discriminant = b * b - 4*a*c;
-		
-		if (discriminant < 0.0f) { // ray misses
-			return false; 
-		}
-		if (discriminant > 0.0f) { // ray hits at two points
-			// get the 2 intersection distances along ray
-			float t_a = -b + sqrtf(discriminant);
-			float t_b = -b - sqrtf(discriminant);
-			*intersection_distance = t_b;
-			// if behind viewer, throw one or both away
-			if (t_a < 0.0) {
-				if (t_b < 0.0) { return false; }
-			}
-			else if (t_b < 0.0) {
-				*intersection_distance = t_a;
-			}
-
-			return true;
-		}
-		// check for ray hitting once (skimming the surface)
-		if (0.0f == discriminant) {
-			// if behind viewer, throw away
-			float t = -b + sqrtf(discriminant);
-			if (t < 0.0f) { return false; }
-			*intersection_distance = t;
-			return true;
-		}
-		return false;
-	}
+	// static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+	// 	const vec3& A = ray.origin;
+	// 	const vec3& B = ray.direction;
+	// 
+	// 	assert(fabsf(length(B) - 1) < 1e-03);
+	// 
+	// 	// work out components of quadratic
+	// 	vec3 A_C = A - C;
+	// 	float a = 1;
+	// 	float b = 2 * dot(B, A_C);
+	// 	float c = dot(A_C, A_C) - r * r;
+	// 	float discriminant = b * b - 4 * a * c;
+	// 
+	// 	if (discriminant < 0.0f) { // ray misses
+	// 		return false;
+	// 	}
+	// 	if (discriminant > 0.0f) { // ray hits at two points
+	// 		// get the 2 intersection distances along ray
+	// 		float t_a = -b + sqrtf(discriminant);
+	// 		float t_b = -b - sqrtf(discriminant);
+	// 		*intersection_distance = t_b;
+	// 		// if behind viewer, throw one or both away
+	// 		if (t_a < 0.0) {
+	// 			if (t_b < 0.0) { return false; }
+	// 		}
+	// 		else if (t_b < 0.0) {
+	// 			*intersection_distance = t_a;
+	// 		}
+	// 
+	// 		return true;
+	// 	}
+	// 	// check for ray hitting once (skimming the surface)
+	// 	if (0.0f == discriminant) {
+	// 		// if behind viewer, throw away
+	// 		float t = -b + sqrtf(discriminant);
+	// 		if (t < 0.0f) { return false; }
+	// 		*intersection_distance = t;
+	// 		return true;
+	// 	}
+	// 	return false;
+	// }
 
 	// as in https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection
 	// also "Ray Sphere Intersection 2 Geometrical.pdf"
-	//static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+	static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+		const vec3& vRayOrigin = ray.origin;
+		const vec3& vRayDirection = ray.direction;
 
-	//}
+		vec3 vOriginCenterDir = C - vRayOrigin;
+		float fCathethusMagnitude1 = dot(vOriginCenterDir, vRayDirection);
+
+		if (fCathethusMagnitude1 < 0) return false;
+
+		float fCathethusMagnitude2 = sqrtf(dot(vOriginCenterDir, vOriginCenterDir) - (fCathethusMagnitude1 * fCathethusMagnitude1));
+
+		if (fCathethusMagnitude2 < 0 || fCathethusMagnitude2 > r) return false;
+
+		float fCathethusMagnitude3 = sqrtf((r * r) - (fCathethusMagnitude2 * fCathethusMagnitude2));
+
+		float fIntersectionDistance1 = fCathethusMagnitude1 - fCathethusMagnitude3;
+		float fIntersectionDistance2 = fCathethusMagnitude1 + fCathethusMagnitude3;
+
+		*intersection_distance = fIntersectionDistance2;
+
+		if (fIntersectionDistance1 < 0.0) {
+			if (fIntersectionDistance2 < 0.0) return false;
+		}
+		else if (fIntersectionDistance2 < 0.0) *intersection_distance = fIntersectionDistance1;
+
+		return true;
+	} // Working with the discriminant feels abstract, the geometric solution is more natural.
 
 	static void onKeyPressed(GLFWwindow* window, int key, int scancode, int action, int mods){
 
